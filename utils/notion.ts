@@ -31,16 +31,16 @@ export const getAllArticles = async databaseId => {
 
 const mapArticleProperties = article => {
   const { id, properties } = article;
-
+  console.log(article.properties.Author)
   return {
     id: id,
     title: properties?.title.title[0].plain_text || '',
     categories:
       properties?.categories?.multi_select.map((category: any) => category.name) || [],
-    author: {
-      name: properties.Author.created_by.name,
-      imageUrl: properties.Author.created_by.avatar_url
-    },
+    // author: {
+    //   name: properties.Author.created_by.name,
+    //   imageUrl: properties.Author.created_by.avatar_url
+    // },
     coverImage:
       properties?.coverImage?.files[0]?.file?.url ||
       properties?.coverImage?.files[0]?.external?.url ||
@@ -65,7 +65,7 @@ export const convertToArticleList = (tableData: any) => {
 
     return mapArticleProperties(article);
   });
-
+  console.log('HERE', articles)
   return { articles, categories };
 };
 

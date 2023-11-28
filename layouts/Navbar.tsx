@@ -11,6 +11,7 @@ export default function Navbar() {
           <Link href="/" passHref>
             <div className="text-xl font-bold cursor-pointer">{siteData.author}</div>
           </Link>
+          
           <Socials />
         </div>
       </Container>
