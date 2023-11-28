@@ -7,7 +7,7 @@ const API_KEY = process.env.NEXT_PUBLIC_CONVERTKIT_API_KEY;
 
 export default function HeroHeader() {
   return (
-    <div className="py-24 text-center bg-gray-100">
+    <div className="py-24 text-center bg-brand-50">
       <Container>
         {siteData?.profileUrl && (
           <img
