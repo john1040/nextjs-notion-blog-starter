@@ -31,7 +31,7 @@ export const getAllArticles = async databaseId => {
 
 const mapArticleProperties = article => {
   const { id, properties } = article;
-  console.log(article.properties.Author)
+  // console.log(article.properties.Author)
   return {
     id: id,
     title: properties?.title.title[0].plain_text || '',
@@ -65,7 +65,7 @@ export const convertToArticleList = (tableData: any) => {
 
     return mapArticleProperties(article);
   });
-  console.log('HERE', articles)
+  // console.log('HERE', articles);
   return { articles, categories };
 };
 

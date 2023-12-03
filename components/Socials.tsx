@@ -1,6 +1,6 @@
 import siteData from 'data/siteData';
 import Image from 'next/image';
-import Link from 'next/link';
+import CustomLink from './CustomLink';
 import UseAnimations from 'react-useanimations';
 import github from 'react-useanimations/lib/github';
 import linkedin from 'react-useanimations/lib/linkedin';
@@ -11,7 +11,7 @@ const socials = [
   //   name: 'Twitter',
   //   href: siteData.twitter,
   //   animation: twitter
-  // },
+  // }
   // {
   //   name: 'LinkedIn',
   //   href: siteData.linkedin,
@@ -27,7 +27,7 @@ const socials = [
 export default function Socials() {
   return (
     <div className="flex justify-center space-x-6 md:order-2">
-      <Link href='https://chaptor.app'>前往 chaptor</Link>
+      <CustomLink href="https://chaptor.app">前往 Chaptor</CustomLink>
       {socials.map(item => (
         <a
           key={item.name}

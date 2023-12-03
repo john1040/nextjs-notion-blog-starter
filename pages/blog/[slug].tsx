@@ -40,34 +40,37 @@ const ArticlePage = ({
         ogUrl={`/blog/${slug}`}
       >
         <div>
-          <div className="px-6 py-16 pb-48 mx-auto -mb-48 text-center bg-gray-100 md:pb-96 md:-mb-96">
-            <div className="max-w-3xl mx-auto">
-              <div className="flex items-center justify-center mb-2 space-x-2 text-sm text-gray-500">
+          <div className="mx-auto -mb-48 bg-gray-100 px-6 py-16 pb-48 text-center md:-mb-96 md:pb-96">
+            <div className="mx-auto max-w-3xl">
+              <div className="mb-2 flex items-center justify-center space-x-2 text-sm text-gray-500">
                 <div className="">{publishedOn}</div>
               </div>
-              <div className="font-extrabold tracking-tight text-gray-900 text-w-4xl sm:text-4xl">
+              <div className="text-w-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                 {title}
               </div>
-              <div className="max-w-3xl mx-auto mt-3 text-xl leading-8 text-gray-500 sm:mt-4">
+              <div className="mx-auto mt-3 max-w-3xl text-xl leading-8 text-gray-500 sm:mt-4">
                 {summary}
               </div>
             </div>
           </div>
 
-          <div className="max-w-5xl px-6 mx-auto my-16 md:px-8">
-            <img className="object-cover w-full rounded-xl aspect-video" src={coverImage} />
+          <div className="mx-auto my-16 max-w-5xl px-6 md:px-8">
+            <img
+              className="aspect-video w-full rounded-xl object-cover"
+              src={coverImage}
+            />
           </div>
-          <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8">
+          <div className="mx-auto mb-24 max-w-4xl space-y-8 px-6 md:px-8">
             {content.map(block => (
               <Fragment key={block.id}>{renderBlocks(block)}</Fragment>
             ))}
           </div>
-          <div className="py-12 border-t">
+          <div className="border-t py-12">
             <Container>
-              <div className="flex items-center justify-between my-8">
+              <div className="my-8 flex items-center justify-between">
                 <div className="text-3xl font-bold text-gray-900">Latest articles</div>
                 <Link href="/">
-                  <span className="font-semibold text-gray-900 cursor-pointer">
+                  <span className="cursor-pointer font-semibold text-gray-900">
                     More articles ➜
                   </span>
                 </Link>

@@ -9,9 +9,9 @@ export default function HeroHeader() {
   return (
     <div className="py-24 text-center bg-brand-50">
       <Container>
-        {siteData?.profileUrl && (
+        {siteData.images.icon && (
           <img
-            src={siteData.profileUrl}
+            src={siteData.images.icon}
             className="w-24 h-24 mx-auto rounded-full"
             alt="profile"
           />

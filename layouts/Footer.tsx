@@ -1,16 +1,19 @@
 import Container from 'components/Container';
-import Socials from 'components/Socials';
+import Contacts from 'components/Contacts';
 import siteData from 'data/siteData';
 
 export default function Footer() {
   return (
-    <footer className="py-16 bg-white border-t">
+    <footer className="border-t bg-white py-4 md:py-8">
       <Container>
-        <div className="md:flex md:items-center md:justify-between">
-          <Socials />
-          <div className="mt-8 md:mt-0 md:order-1">
-            <p className="text-base text-center text-gray-400">{siteData.footerText}</p>
+        <div className="flex items-end justify-between">
+          <div className="mt-4 flex items-center justify-center gap-2">
+            <img src="/icon.svg" alt="" className="w-4 md:w-6" />
+            <p className="text-center text-[12px] text-gray-400 md:text-base">
+              {siteData.footerText}
+            </p>
           </div>
+          <Contacts />
         </div>
       </Container>
     </footer>

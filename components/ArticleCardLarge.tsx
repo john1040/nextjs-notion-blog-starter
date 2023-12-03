@@ -6,13 +6,13 @@ type Props = {
   article: Article;
 };
 
-export default function ArticleCard({ article }: Props) {
+export default function ArticleCardLarge({ article }: Props) {
   const slug = slugify(article.title).toLowerCase();
 
   const formattedTime = getLocalizedDate(article.publishedDate);
 
   return (
-    <a href={`/blog/${slug}`} className="group relative">
+    <a href={`/blog/${slug}`} className="group relative lg:col-span-2">
       <div className="absolute bottom-0 right-0 z-0 h-full w-full rounded-lg bg-black duration-500 group-hover:-bottom-1 group-hover:-right-1" />
       <div className="relative z-10 flex h-full translate-x-0  translate-y-0 cursor-pointer flex-col overflow-hidden rounded-lg border-2 border-black duration-500 group-hover:-translate-x-1 group-hover:-translate-y-1">
         <div className="relative">

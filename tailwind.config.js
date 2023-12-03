@@ -15,9 +15,8 @@ module.exports = {
           500: '#FFC87E',
           900: '#FAA534',
           1100: '#E49B37'
-      },
+        },
       },
     }
   },
-  plugins: [require('@tailwindcss/line-clamp')]
-};
+}

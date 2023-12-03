@@ -9,6 +9,10 @@ export function MetaHead(props) {
   return (
     <Head>
       <title>{titleName}</title>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      />
       <meta name="robots" content="follow, index" />
       <meta content={description || titleName} name="description" />
       <meta property="og:site_name" content={siteData.author} />

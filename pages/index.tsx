@@ -13,8 +13,8 @@ export default function Index({ articles, categories }) {
 
   return (
     <Layout>
-      <HeroHeader />
-      <div className="flex flex-wrap justify-center gap-4 mt-8">
+      {/* <HeroHeader /> */}
+      <div className="mt-8 flex flex-wrap justify-center gap-4">
         {categories.map(tag => (
           <Category
             tag={tag}
@@ -26,10 +26,10 @@ export default function Index({ articles, categories }) {
       </div>
       <Container>
         <div className="py-8">
-          <div className="my-8 text-3xl font-bold text-gray-900">
+          {/* <div className="my-8 text-3xl font-bold text-gray-900">
             {!selectedTag ? 'Latest articles' : `${selectedTag} articles`}
-          </div>
-          <ArticleList articles={filteredArticles} />
+          </div> */}
+          <ArticleList articles={filteredArticles} isHomePage />
         </div>
       </Container>
     </Layout>

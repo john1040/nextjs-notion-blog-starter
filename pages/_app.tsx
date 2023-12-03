@@ -6,15 +6,14 @@ import 'styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      {process.env.NEXT_PUBLIC_UMAMI_ID &&
-        process.env.NEXT_PUBLIC_UMAMI_URL && (
-          <Script
-            data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
-            src={process.env.NEXT_PUBLIC_UMAMI_URL}
-          />
-        )}
+      {process.env.NEXT_PUBLIC_UMAMI_ID && process.env.NEXT_PUBLIC_UMAMI_URL && (
+        <Script
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
+          src={process.env.NEXT_PUBLIC_UMAMI_URL}
+        />
+      )}
       <Toaster />
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }
